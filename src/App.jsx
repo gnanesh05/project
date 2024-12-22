@@ -1,4 +1,5 @@
 import './App.css'
+import TicTacToe from './components/TicTacToe'
 import UserRating from './components/UserRating'
 
 function App() {
@@ -10,6 +11,8 @@ function App() {
           <p>1. User Rating</p>
           <UserRating/>
         </div>
+        <p>Tic Tac Toe</p>
+        <TicTacToe/>
       </div>
       </>
   )
