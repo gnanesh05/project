@@ -1,0 +1,92 @@
+[
+    {
+      "question": "What is the largest planet in our solar system?",
+      "options": [
+        {"value": "Saturn", "isCorrect": false},
+        {"value": "Mars", "isCorrect": false},
+        {"value": "Earth", "isCorrect": false},
+        {"value": "Jupiter", "isCorrect": true}
+      ]
+    },
+    {
+      "question": "What is the tallest mountain in the world?",
+      "options": [
+        {"value": "Mount Everest", "isCorrect": true},
+        {"value": "K2", "isCorrect": false},
+        {"value": "Kangchenjunga", "isCorrect": false},
+        {"value": "Lhotse", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Which country is home to the Great Wall of China?",
+      "options": [
+        {"value": "China", "isCorrect": true},
+        {"value": "Japan", "isCorrect": false},
+        {"value": "Korea", "isCorrect": false},
+        {"value": "India", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "What is the capital of France?",
+      "options": [
+        {"value": "London", "isCorrect": false},
+        {"value": "Berlin", "isCorrect": false},
+        {"value": "Paris", "isCorrect": true},
+        {"value": "Rome", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "What is the chemical formula for water?",
+      "options": [
+        {"value": "H2O", "isCorrect": true},
+        {"value": "CO2", "isCorrect": false},
+        {"value": "NaCl", "isCorrect": false},
+        {"value": "NH3", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "What is the largest ocean on Earth?",
+      "options": [
+        {"value": "Atlantic Ocean", "isCorrect": false},
+        {"value": "Pacific Ocean", "isCorrect": true},
+        {"value": "Indian Ocean", "isCorrect": false},
+        {"value": "Arctic Ocean", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "What is the most popular social media platform?",
+      "options": [
+        {"value": "Instagram", "isCorrect": true},
+        {"value": "Facebook", "isCorrect": false},
+        {"value": "Twitter", "isCorrect": false},
+        {"value": "YouTube", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "What is the currency of Japan?",
+      "options": [
+        {"value": "Euro", "isCorrect": false},
+        {"value": "US Dollar", "isCorrect": false},
+        {"value": "Japanese Yen", "isCorrect": true},
+        {"value": "Chinese Yuan", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "What is the world's largest search engine?",
+      "options": [
+        {"value": "Google", "isCorrect": true},
+        {"value": "Bing", "isCorrect": false},
+        {"value": "Yahoo", "isCorrect": false},
+        {"value": "DuckDuckGo", "isCorrect": false}
+      ]
+    },
+    {
+      "question": "Who painted the Mona Lisa?",
+      "options": [
+        {"value": "Michelangelo", "isCorrect": false},
+        {"value": "Leonardo da Vinci", "isCorrect": true},
+        {"value": "Sandro Botticelli", "isCorrect": false},
+        {"value": "Raphael", "isCorrect": false}
+      ]
+    }
+  ]

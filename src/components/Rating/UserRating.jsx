@@ -18,6 +18,7 @@ const UserRating = () => {
   
   return (
     <div className="card" onMouseLeave={removeIndex}>
+      <h2>User Rating</h2>
         {
           buttons.map((button,i)=>(
             <button key={i} onMouseEnter={()=>addIndex(i+1)}

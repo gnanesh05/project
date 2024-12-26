@@ -18,8 +18,8 @@ const UseTicTacToe = ()=>{
      ]
 
      const calculateWinner = (currentBoard)=>{
-        for(let i=0; i<WINNING_PATTERNS.length; i++){
-            const[a,b,c] = WINNING_PATTERNS[i];
+        for(const element of WINNING_PATTERNS){
+            const[a,b,c] = element;
             if((currentBoard[a] && currentBoard[a]===currentBoard[b]) && ( currentBoard[b]===currentBoard[c])){
                 return currentBoard[a];
             }

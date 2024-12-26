@@ -1,11 +1,12 @@
 import React,{useState} from 'react'
-import UseTicTacToe from './Hooks/UseTicTacToe'
+import UseTicTacToe from '../Hooks/UseTicTacToe'
 
 
 const TicTacToe = () => {
  const {board, getStatusMessage, resetGame, handleClick} = UseTicTacToe()
   return (
     <div className="game">
+        <h2>Tic Tac Toe</h2>
         <div className="status">
             {getStatusMessage()}
             <button className='reset' onClick={resetGame}>Reset Game</button>

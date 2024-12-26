@@ -59,6 +59,66 @@ margin-bottom: 20px;
   padding:5px 10px
 }
 
+.question{
+  margin:20px auto;
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.question h2{
+  margin-bottom: 10px;
+}
+
+.projects{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px; 
+}
+
+.options{
+list-style: none;
+padding: 0;
+display: grid;
+grid-template-columns: auto auto;
+gap: 10px; 
+}
+
+.option button{
+ width: 100%;
+ border-radius: 5px;
+ padding: 10px 20px;
+}
+
+.results{
+margin: 20px auto;
+width: 100%;
+padding: 15px;
+border: 1px solid #ddd;
+border-radius: 5px;
+}
+
+.results ul{
+  list-style: none;
+  padding: 0;
+}
+
+
+.results li{
+  margin-bottom: 10px;
+}
+
+.results li[data-correct="true"]{
+  color: green;
+}
+
+.results li[data-correct="false"]{
+  color: red;
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
