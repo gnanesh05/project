@@ -11,7 +11,7 @@ const Quiz = () => {
     setAnswers([...answers, isCorrect])
     setCurrentQuestion(prevState=>prevState+1);
   }
-console.log(currentQuestion, questions.length)
+
   const resetQuiz = ()=>{
     setCurrentQuestion(0);
     setAnswers([]);
