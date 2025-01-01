@@ -4,6 +4,7 @@ import TicTacToe from './components/TicTacToe/TicTacToe'
 import UserRating from './components/Rating/UserRating'
 import Quiz from './components/Quiz/Quiz'
 import Grid from './components/Grids/Grid'
+import Like from './components/Like/Like'
 
 function App() {
   const [project, setProject] = useState(0);
@@ -18,6 +19,8 @@ function App() {
         return <Quiz/>
       case 3:
         return <Grid/>
+      case 4:
+        return <Like/>
       default:
         return <UserRating/>
     }
@@ -43,6 +46,9 @@ function App() {
           </li>
           <li>
             <button onClick={()=>projectHandler(3)}>Grid Lights</button>
+          </li>
+          <li>
+            <button onClick={()=>projectHandler(4)}>Like</button>
           </li>
         </ul>
       </div>
