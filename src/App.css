@@ -1,8 +1,30 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
+  width: 100%;
   text-align: center;
+}
+
+[data-theme="light"]{
+  --bg-color:#ffffff;
+  --text-color:#333333;
+  --heading-color:#444444;
+}
+
+[data-theme="dark"]{
+  --bg-color:#333333;
+  --text-color:#ffffff;
+  --heading-color:#dddddd;
+}
+
+body{
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1{
+  color:var(--heading-color)
 }
 
 .logo {
@@ -119,25 +141,42 @@ border-radius: 5px;
   color: red;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.switch label{
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  position: relative;
+  margin-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.switch .slider{
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
 }
 
-.card {
-  padding: 2em;
+.switch input:checked + .slider{
+background-color: #2196f3;
 }
 
-.read-the-docs {
-  color: #888;
+.switch .slider:before{
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 16px;
+  left: 2px;
+  right: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.switch input:checked + .slider:before{
+transform: translateX(20px);
 }
