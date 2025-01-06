@@ -4,6 +4,7 @@ import UserRating from './components/Rating/UserRating'
 import Quiz from './components/Quiz/Quiz'
 import Grid from './components/Grids/Grid'
 import Like from './components/Like/Like'
+import Folder from './components/Folder/Folder'
 
 const Home = () => {
     const [project, setProject] = useState(0);
@@ -20,6 +21,8 @@ const Home = () => {
         return <Grid/>
       case 4:
         return <Like/>
+      case 5:
+        return <Folder/>
       default:
         return <UserRating/>
     }
@@ -48,6 +51,9 @@ const Home = () => {
                   </li>
                   <li>
                     <button onClick={()=>projectHandler(4)}>Like</button>
+                  </li>
+                  <li>
+                    <button onClick={()=>projectHandler(5)}>Folder</button>
                   </li>
                 </ul>
               </div>
