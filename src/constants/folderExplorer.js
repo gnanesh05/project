@@ -1,0 +1,60 @@
+const explorer = {
+    name:"root",
+    isFolder:true,
+    contents:[
+        {
+        name:"public",
+        isFolder:true,
+        contents:[
+            {
+                name:"static",
+                isFolder:true,
+                contents:[
+                    {
+                        name:"index.html",
+                        isFolder:false,
+                    },
+                    {
+                        name:"index.js",
+                        isFolder:false,
+                    }
+                ]
+            },
+            {
+                name : "readme.txt",
+                isFolder:false,
+            }
+        ]
+        },
+        {
+            name:"src",
+            isFolder:true,
+            contents:[
+                {
+                    name:"components",
+                    isFolder:true,
+                    contents:[
+                        {
+                            name:"App.jsx",
+                            isFolder:false,
+                        },
+                        {
+                            name:"index.js",
+                            isFolder:false,
+                        }
+                    ]
+                },
+                {
+                    name : "data.json",
+                    isFolder:false,
+                }
+            ]
+        },
+        {
+            name:"package.json",
+            isFolder:false,
+        }
+    ],
+}
+
+export default explorer
