@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import './NavBar.css'
 import { useTheme } from '../../ThemeContext'
 
@@ -10,6 +10,9 @@ const NavBar = () => {
         <div>
             <Link to="/">Projects</Link>
             <Link to="/About">About</Link>
+            <NavLink to="/books" style={({isActive})=>{return isActive ? {color:"red"}:{}}}>Books</NavLink>
+            <Link to="/todos">Todos</Link>
+            <Link to="/admin">Admin</Link>
         </div>
         <div className="switch">
             <label htmlFor="theme-input">
