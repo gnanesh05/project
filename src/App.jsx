@@ -14,6 +14,7 @@ import UnAuthorised from './components/react-router/UnAuthorised'
 import { Provider } from 'react-redux'
 import store from './store'
 import Todo from './components/Todos/Todo'
+import Slider from './components/slider/slider'
 const Home = React.lazy(()=>import('./Home'))
 
 //const home = React.lazy(()=>import('./Home').then(module=>{default:module.Home}))
@@ -43,6 +44,7 @@ function App() {
                           <Admin/>
                       </ProtectedRoute>
                     }/>
+                    <Route path='/slider' element={<Slider/>}/>
                     <Route path='/unauthorised' element={<UnAuthorised/>} />
                     <Route path='*' element={<NotFound/>} />
                 </Routes>

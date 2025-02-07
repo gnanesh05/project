@@ -4,7 +4,6 @@ import { useAuth } from '../../UserContext'
 
 const ProtectedRoute = ({allowedRoutes, children}) => {
     const {user} = useAuth()
-    console.log(user)
     if(!allowedRoutes.includes(user))
         return <Navigate to="/unauthorised"/>
     return children

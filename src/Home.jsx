@@ -5,6 +5,7 @@ import Quiz from './components/Quiz/Quiz'
 import Grid from './components/Grids/Grid'
 import Like from './components/Like/Like'
 import Folder from './components/Folder/Folder'
+import SearchBar from './components/AutoComplete/SearchBar'
 
 const Home = () => {
     const [project, setProject] = useState(0);
@@ -23,6 +24,8 @@ const Home = () => {
         return <Like/>
       case 5:
         return <Folder/>
+      case 6:
+        return <SearchBar/>
       default:
         return <UserRating/>
     }
@@ -54,6 +57,9 @@ const Home = () => {
                   </li>
                   <li>
                     <button onClick={()=>projectHandler(5)}>Folder</button>
+                  </li>
+                  <li>
+                    <button onClick={()=>projectHandler(6)}>AutoComplete Search</button>
                   </li>
                 </ul>
               </div>
