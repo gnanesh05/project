@@ -1,5 +1,5 @@
 const initialState = {
-    notifications : []
+    notifications : {}
 }
 
 const NotificationReducer = (state=initialState, action)=>{
@@ -8,12 +8,18 @@ const NotificationReducer = (state=initialState, action)=>{
         case 'ADD_NOTIFICATION':
             return {
                 ...state,
-                notifications:[payload, ...state.notifications]
+                notifications:{
+                    ...state.notifications,
+                [payload.location]:[...(state.notifications[payload.location] || []), payload.notification]
+                }
             }
         case 'REMOVE_NOTIFICATION':
             return {
                 ...state,
-                notifications : [...state.notifications.filter(item=>item.id !== payload.id)]
+                notifications:{
+                ...state.notifications,
+                [payload.location] : state.notifications[payload.location].filter(item=>item.id !== payload.id)
+                }
             }
         default:
             return state;

@@ -1,31 +1,27 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback} from 'react'
 import { useDispatch } from 'react-redux';
-import CustomNotification from '../CustomNotification/CustomNotification';
+
 
 function useNotification({location}) {
-    const [notifications, setNotifications] = useState([]);
+
+   const dispatch = useDispatch();
     const triggerNotification = useCallback((notificationProps)=>{
         const id = Date.now();
-        const newNotification = {id,...notificationProps};
-        setNotifications((prevState)=>([...prevState, newNotification]));
+        const newNotification = {id,...notificationProps,location};
+        dispatch({
+            type:"ADD_NOTIFICATION",
+            payload:{notification:newNotification, location:location}
+        })
         setTimeout(()=>{
-            setNotifications((prevState)=>prevState.filter((item)=>item.id!==id));
+          dispatch({
+            type:"REMOVE_NOTIFICATION",
+            payload:{id, location}
+          })
         },notificationProps.duration)
 
-    },[]);
-    const onClose = (id)=>{
-        setNotifications((prevState)=>prevState.filter((item)=>item.id!==id));   
-    }
+    },[dispatch]);
 
-    const NotificationComponent = notifications.length ? (<div className={` ${location} `}>
-        {
-            notifications.map((notification,i)=>(
-                <CustomNotification key={i} {...notification} onClose={()=>onClose(notification.id)}/>
-            ))
-        }
-    </div>) : null;
-
-    return {triggerNotification, NotificationComponent}
+    return {triggerNotification}
 }
 
 export default useNotification

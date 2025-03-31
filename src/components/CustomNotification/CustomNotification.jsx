@@ -12,7 +12,10 @@ const Icons = {
 }
 const CustomNotification = ({type='', message, onClose=()=>{}}) => {
   return (
-    <div className={`Notification ${type}`}>
+    <div className={`Notification ${type}`}
+    role="alert"
+    aria-live="assertive"
+    >
         {Icons[type]}
         {message}
         <IoIosCloseCircleOutline className='closeBtn' onClick={()=>onClose()}/>
