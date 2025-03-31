@@ -6,6 +6,7 @@ import Grid from './components/Grids/Grid'
 import Like from './components/Like/Like'
 import Folder from './components/Folder/Folder'
 import SearchBar from './components/AutoComplete/SearchBar'
+import NotificationGrid from './components/CustomNotification/NotificationGrid'
 
 const Home = () => {
     const [project, setProject] = useState(0);
@@ -26,6 +27,8 @@ const Home = () => {
         return <Folder/>
       case 6:
         return <SearchBar/>
+      case 7:
+        return <NotificationGrid/>
       default:
         return <UserRating/>
     }
@@ -60,6 +63,9 @@ const Home = () => {
                   </li>
                   <li>
                     <button onClick={()=>projectHandler(6)}>AutoComplete Search</button>
+                  </li>
+                  <li>
+                    <button onClick={()=>projectHandler(7)}>Custom Notification</button>
                   </li>
                 </ul>
               </div>
